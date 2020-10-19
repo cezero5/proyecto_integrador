@@ -10,6 +10,7 @@ class HomePage extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(title: Text('Home')),
+      drawer: _crearMenu(),
       body: _crearListado(productosBloc),
       floatingActionButton: _crearBoton(context),
     );
@@ -71,6 +72,23 @@ class HomePage extends StatelessWidget {
       child: Icon(Icons.add),
       backgroundColor: Colors.grey[700],
       onPressed: () => Navigator.pushNamed(context, 'producto'),
+    );
+  }
+
+  Drawer _crearMenu() {
+    return Drawer(
+      child: ListView(
+        padding: EdgeInsets.zero,
+        children: <Widget>[
+          DrawerHeader(
+            child: Container(),
+            decoration: BoxDecoration(
+                image: DecorationImage(
+                    image: AssetImage('assets/menu-img.jpg'),
+                    fit: BoxFit.cover)),
+          )
+        ],
+      ),
     );
   }
 }

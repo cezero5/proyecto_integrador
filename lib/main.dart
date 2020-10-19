@@ -6,6 +6,7 @@ import 'package:formvalidation/src/pages/home_page.dart';
 import 'package:formvalidation/src/pages/login_page.dart';
 import 'package:formvalidation/src/pages/producto_page.dart';
 import 'package:formvalidation/src/pages/registro_page.dart';
+import 'package:formvalidation/src/pages/settings_page.dart';
 import 'package:formvalidation/src/preferencias_usuario/preferencias_usuario.dart';
 
 void main() async {
@@ -32,6 +33,7 @@ class MyApp extends StatelessWidget {
           'registro': (BuildContext context) => RegistroPage(),
           'home': (BuildContext context) => HomePage(),
           'producto': (BuildContext context) => ProductoPage(),
+          'Ajustes': (BuildContext context) => SettingsPage(),
         },
         theme: ThemeData(
           primaryColor: Colors.grey[700],
